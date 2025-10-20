@@ -22,7 +22,7 @@
  * @author     David Kelly <contact@davidkel.ly>
  */
 
-define(['jquery'], function($) {
+define(['mod_mosaic/app-lazy'], function(VueApp) {
     return {
         /**
          * Initialize the Mosaic board application.
@@ -30,18 +30,12 @@ define(['jquery'], function($) {
          * @param {Object} config Configuration object.
          */
         init: function(config) {
-            // Log initialization.
-            // eslint-disable-next-line no-console
-            console.log('Mosaic board initializing...', config);
-
-            // Wait for Vue app bundle to be loaded.
-            // For now, just display the board ID.
-            var container = $('#mosaic-board-app');
-            if (container.length) {
-                container.find('.mosaic-loading').html(
-                    '<p>Mosaic Board ' + config.boardid + ' will load here.</p>' +
-                    '<p>Vue.js app coming soon!</p>'
-                );
+            // Initialize the Vue app
+            if (VueApp && VueApp.init) {
+                VueApp.init(config);
+            } else {
+                // eslint-disable-next-line no-console
+                console.error('Mosaic: Vue app module not loaded correctly');
             }
         }
     };

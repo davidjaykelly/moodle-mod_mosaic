@@ -99,7 +99,11 @@ $config = [
 // Add the Vue.js app container.
 echo html_writer::start_div('mosaic-board-container', ['id' => 'mosaic-board-app', 'data-config' => json_encode($config)]);
 echo html_writer::div(
-    html_writer::div($OUTPUT->loading_icon('large'), 'text-center'),
+    html_writer::div(
+        html_writer::tag('div', '', ['class' => 'spinner-border text-primary', 'role' => 'status']) .
+        html_writer::tag('span', get_string('loading'), ['class' => 'sr-only']),
+        'text-center'
+    ),
     'mosaic-loading'
 );
 echo html_writer::end_div();
