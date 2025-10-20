@@ -103,6 +103,11 @@ $string['errordeletingcard'] = 'Error deleting card.';
 $string['errorinvalidcard'] = 'Invalid card.';
 $string['errorupdatingcard'] = 'Error updating card.';
 
+// Events.
+$string['eventcardcreated'] = 'Card created';
+$string['eventcarddeleted'] = 'Card deleted';
+$string['eventcardupdated'] = 'Card updated';
+
 // Privacy.
 $string['privacy:metadata:mosaic_cards'] = 'Information about cards created by users.';
 $string['privacy:metadata:mosaic_cards:anonymous'] = 'Whether the post is anonymous.';
