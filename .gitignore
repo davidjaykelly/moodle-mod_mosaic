@@ -1,0 +1,41 @@
+# Node.js / NPM
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Webpack build output (we'll commit the built files for Moodle)
+# Uncomment if you want to ignore build artifacts:
+# amd/build/
+# styles/vue-styles.css
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Moodle specific
+.moodle_cache/
+moodledata/
+config.php
+
+# Temporary files
+*.tmp
+*.bak
+*.orig
+.*.swp
+
+# Environment files
+.env
+.env.local
+
+# Log files
+*.log
+
+# OS files
+Thumbs.db
